@@ -1,0 +1,27 @@
+﻿@using WebBookStore.Pages.Data.Models
+@model IEnumerable<BookList>   
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2>Все книги</h2>
+    @{ 
+		foreach (var book in Model) { 
+            <div>
+                <h2>Книга: @book.Name</h2>
+                <p>Цена: @book.Price.ToString("c")</p>
+            </div>
+        }
+    }
+
+</body>
+</html>
